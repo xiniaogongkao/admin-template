@@ -124,13 +124,10 @@
 export default {
   name: 'HelloWorld',
   props: {
-    msg: String
-  },
-  data() {
-    return {
+    msg: {
+      type: String,
+      default: ''
     }
-  },
-  created() {
   }
 }
 </script>
