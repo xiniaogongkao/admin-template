@@ -20,6 +20,7 @@ const vueConfig = {
     if (process.env.NODE.ENV === 'production') {
       config.plugin('loadshReplace').use(new LodashModuleReplacementPlugin())
     }
+    config.plugins.delete('prefetch')
    }
 }
 module.exports = vueConfig
