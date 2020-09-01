@@ -6,6 +6,7 @@ import store from './store'
 // 组件按需引入
 import './core/lazy_use'
 import 'moment/locale/zh-cn'
+import './utils/filter' // global filter
 
 Vue.config.productionTip = false
 
