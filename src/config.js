@@ -10,8 +10,8 @@ if (process.env.NODE_ENV === 'development') {
 
 // 接口地址
 const baseURLs = {
-    dev: 'https://api.test.shunqi.sdbus.com.cn/v3/admin',
-    test: 'https://api.test.shunqi.sdbus.com.cn/v3/admin',
+    dev: 'https://api.test.shunqi.sdbus.com.cn/v1/admin',
+    test: 'https://api.test.shunqi.sdbus.com.cn/v2/admin',
     production: 'https://api.shunqi.sdbus.com.cn/v3/admin'
 }
 
