@@ -9,11 +9,11 @@ module.exports = {
     '@vue/standard'
   ],
   parserOptions: {
-    parser: "babel-eslint"
+    parser: 'babel-eslint'
   },
   rules: {
-    "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
-    "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
+    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'generator-star-spacing': 'off',
     'no-mixed-operators': 0,
     'vue/max-attributes-per-line': [
@@ -63,4 +63,4 @@ module.exports = {
     'indent': 'off',
     'space-before-function-paren': [2, 'never']
   }
-};
+}
