@@ -25,11 +25,11 @@ const vueConfig = {
     if (process.env.NODE.ENV === 'production') {
       config.plugin('loadshReplace').use(new LodashModuleReplacementPlugin())
     }
+    // 关闭预加载
     config.plugins.delete('preload')
     config.plugins.delete('prefetch')
   },
   pluginOptions: {
-    // 关闭预加载
     'style-resources-loader': {
       preProcessor: 'less',
       patterns: [path.resolve(__dirname, 'src/assets/less/index.less')]
