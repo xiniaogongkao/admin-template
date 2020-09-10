@@ -1,0 +1,62 @@
+/*
+ * @Author: 陈杰超
+ * @Date: 2020-09-03 17:50:27
+ * @LastEditTime: 2020-09-08 17:03:16
+ * @LastEditors: 陈杰超
+ * @Description: 覆盖ant design vue原生样式
+ */
+ 
+// 解决select和date下拉框被富文本穿透
+.ant-select-dropdown{
+  z-index: 10001;
+}
+.ant-calendar-picker-container{
+  z-index: 10001;
+}
+
+// 解决富文本层级过高
+// .w-e-menu{
+//   z-index: 999 !important;
+// }
+
+
+// header高度调整
+.ant-layout-header{
+  height: 48px;
+  .ant-pro-global-header{
+    height: 48px;
+    line-height: 48px;
+    .ant-pro-global-header-trigger{
+    line-height: 48px;
+    }
+    .ant-pro-global-header-trigger{
+      height: 48px;
+    }
+    .antd-pro-global-header-index-avatar{
+      margin: calc((48px - 24px) / 2) 0;
+      margin-right: 8px;
+    }
+  }
+}
+
+ // 滚动条样式
+::-webkit-scrollbar {
+  width: .5rem;
+  height: .5rem;
+  background: hsla(0, 0%, 100%, 0.6);
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0;
+  background-color: rgba(95,95,95,.3);
+  transition: all .2s;
+  border-radius: .5rem;
+
+  &:hover {
+    background-color: rgba(95,95,95, .6);
+  }
+}

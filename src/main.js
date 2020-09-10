@@ -7,8 +7,15 @@ import store from './store'
 import './core/lazy_use'
 import 'moment/locale/zh-cn'
 import './utils/filter' // global filter
+import 'ant-design-vue/dist/antd.less'
+import './assets/less/global.less'
+import './assets/less/cover.less'
+import ProLayout, { PageHeaderWrapper } from '@ant-design-vue/pro-layout'
 
 Vue.config.productionTip = false
+
+Vue.component('pro-layout', ProLayout)
+Vue.component('page-header-wrapper', PageHeaderWrapper)
 
 new Vue({
   router,

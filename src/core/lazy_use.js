@@ -17,7 +17,7 @@ import {
   Row,
   Col,
   Modal,
-  // Table,
+  Table,
   Tabs,
   Icon,
   Badge,
@@ -53,16 +53,17 @@ import {
   Empty,
   Carousel,
   Affix,
-  Collapse
+  Collapse,
+  Rate
 } from 'ant-design-vue'
 
 // import Viser from 'viser-vue'
 // import draggable from 'vuedraggable'
 // import Dialog from '@/components/Dialog'
-// import MultiTab from '@/components/MultiTab'
 // import PageLoading from '@/components/PageLoading'
 // import PermissionHelper from '@/utils/helper/permission'
 // import './directives/action'
+import './directives/clickOutSide'
 
 Vue.use(ConfigProvider)
 Vue.use(Layout)
@@ -79,7 +80,7 @@ Vue.use(FormModel)
 Vue.use(Row)
 Vue.use(Col)
 Vue.use(Modal)
-// Vue.use(Table)
+Vue.use(Table)
 Vue.use(Tabs)
 Vue.use(Icon)
 Vue.use(Badge)
@@ -114,6 +115,7 @@ Vue.use(Empty)
 Vue.use(Carousel)
 Vue.use(Affix)
 Vue.use(Collapse)
+Vue.use(Rate)
 Vue.prototype.$confirm = Modal.confirm
 Vue.prototype.$message = message
 Vue.prototype.$notification = notification
@@ -125,7 +127,6 @@ Vue.prototype.$warning = Modal.warning
 // Vue.use(Viser)
 // Vue.use(draggable)
 // Vue.use(Dialog) // this.$dialog func
-// Vue.use(MultiTab)
 // Vue.use(PageLoading)
 // Vue.use(PermissionHelper)
 

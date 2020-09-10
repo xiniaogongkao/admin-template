@@ -1,0 +1,327 @@
+
+html,
+body,
+#app, #root {
+  height: 100%;
+}
+
+#app {
+  min-width: 1280px;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout.layout-basic {
+  height: 100vh;
+  min-height: 100vh;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+// sTable表格alert样式
+.table-header-alert {
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  height: 32px;
+  margin: 16px;
+  .alert-number{
+    font-weight: 600;
+    margin: 0 4px
+  }
+}
+
+// 表格列控制
+.column-filter-btn{
+  height: 100%;
+}
+.column-filter-icon{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: @textContent;
+}
+.column-menu-item{
+  margin: 0 !important;
+}
+.column-footer{
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+// 数据列表 样式
+.table-alert {
+  margin-bottom: 16px;
+}
+// 数据列表 操作
+.table-operator {
+  margin-bottom: 18px;
+
+  button {
+    margin-right: 8px;
+  }
+}
+// 数据列表 搜索条件
+.table-page-search-wrapper {
+
+  .ant-form-inline {
+    .ant-form-item {
+      display: flex;
+      margin-bottom: 24px;
+      margin-right: 0;
+
+      .ant-form-item-control-wrapper {
+        flex: 1 1;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+      > .ant-form-item-label {
+        line-height: 32px;
+        padding-right: 8px;
+        width: auto;
+      }
+      .ant-form-item-control {
+        height: 32px;
+        line-height: 32px;
+      }
+    }
+  }
+
+  .table-page-search-submitButtons {
+    display: block;
+    margin-bottom: 24px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: @screen-xs) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+
+
+// 修改a-alert组件样式
+.ant-alert-info{
+  border: none;
+  background-color: #e6fffc
+}
+
+.table-wrapper{
+  .ant-alert-icon{
+    // top: 17.5px;
+    color: #09C1C9 !important;
+  }
+}
+
+
+// 修改树结构样式
+.ant-tree{
+  border-right: 1px solid @border-color;
+}
+.left-menu-tree-class{
+  li{
+    padding: 0;
+  }
+  .ant-tree-switcher {
+    position: relative;
+    z-index: 1;
+  
+    &.ant-tree-switcher-noop {
+      pointer-events: none;
+    }
+  }
+  .ant-tree-node-content-wrapper{
+    width: 100%;
+    height: auto !important;
+    min-height: 36px !important;
+    line-height: 36px !important;
+    .ant-tree-icon__customize{
+      line-height: 36px;
+    }
+    &:hover {
+      background: transparent !important;
+      color: @primary-color;
+  
+      // &::before {
+      //   background: @hover-color;
+      //   border-right: 3px solid @primary-color;
+      // }
+    }
+    &::before {
+      position: absolute;
+      right: 1px;
+      left: 0;
+      height: 36px;
+      transition: all 0.3s;
+      content: '';
+      border-right: 3px solid @white;
+    }
+    > span {
+      position: relative;
+      z-index: 1;
+    }
+  }
+  
+  .ant-tree-treenode-selected{
+    > span {
+      &.ant-tree-node-content-wrapper {
+        color: #09C1C9;
+        background: @white;
+        &::before {
+          background: @hover-color;
+          border-right: 3px solid @primary-color;
+        }
+      }
+    }
+  }
+  // 组织管理-树结构标题样式
+  .org-tree-title{
+    .ant-tree-switcher{
+      display: none !important;
+    }
+    .ant-tree-node-content-wrapper{
+      cursor: default !important;
+      font-size: @fs-lg;
+      &:hover{
+        background-color: @white !important;
+      }
+      &::before {
+        content: none !important;
+      }
+      .ant-tree-title{
+        position: static;
+        width: 100%;
+        .org-tree-btn{
+          position: absolute;
+          right: 0;
+          height: 36px;
+        }
+      }
+    }
+  }
+  // 组织管理-树结构操作样式
+  .org-tree-dept{
+    .ant-tree-switcher {
+      line-height: 36px;
+    }
+    .ant-tree-node-content-wrapper{
+      width: calc(100% - 24px);
+      .ant-tree-title{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: @pd-md;
+        .anticon-ellipsis{
+          display: none;
+          color: @primary-color;
+        }
+        &:hover{
+          .anticon-ellipsis{
+            display: inline-block;
+          }
+        }
+      }
+    }
+    .ant-tree-node-selected{
+      .ant-tree-title{
+        .anticon-ellipsis{
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+// 页面公用-左侧筛选菜单操作样式
+.page-left-menu{
+  border-right: none;
+  .ant-menu-item{
+    .ant-dropdown-link{
+      display: none;
+      position: absolute;
+      right: 6px;
+    }
+    &:hover{
+      // color: @textContent;
+      // background-color: @hover-color;
+      .ant-dropdown-link{
+        display: inline-block;
+      }
+    }
+  }
+  
+}
+
+// 隐藏basicLayout的footer
+.ant-layout-footer{
+  padding: 0;
+}
+
+// 几种基础颜色定义
+.error-color{
+  color: @error-color
+}
+.success-color{
+  color: @success-color
+}
+
+// 提示样式
+.tip-text{
+  font-size: @fs-sm;
+  padding-left: @pd-sm;
+  color: @textSecondary;
+}
+
+// modal图片宽度过宽时显示滚动条
+.ant-modal-content{
+  .ant-modal-body{
+    max-height: 700px;
+    overflow: auto;
+  }
+}
+
+// page-header样式修改
+.ant-page-header{
+  padding: 8px 24px;
+}
+
+// 下拉框新增按钮样式
+.select-add{
+  color: @primary-color;
+  text-align: center;
+  padding: 4px 8px;
+  cursor: pointer;
+}

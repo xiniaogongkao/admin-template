@@ -10,9 +10,10 @@ if (process.env.NODE_ENV === 'development') {
 
 // 接口地址
 const baseURLs = {
-    dev: 'https://api.test.shunqi.sdbus.com.cn/v1/admin',
-    test: 'https://api.test.shunqi.sdbus.com.cn/v2/admin',
-    production: 'https://api.shunqi.sdbus.com.cn/v3/admin'
+  dev: 'http://apife.xiniaogongkao.com/mock/30/v1', // mock数据
+  // dev: 'http://43.247.90.63/index.php/api/v1', // 测试环境
+  test: 'http://43.247.90.63/index.php/api/v1',
+  production: 'http://43.247.90.63/index.php/api/v1'
 }
 
 // 静态资源路径
