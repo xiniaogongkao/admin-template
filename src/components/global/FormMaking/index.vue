@@ -145,7 +145,7 @@ export default {
     right: 0;
     top: -10px;
     transform: translateX(calc(100% + 12px));
-    color: @assist-color;
+    color: @text-color-secondary;
   }
   .new-btn{
     cursor: pointer;

@@ -1,7 +1,7 @@
 <!--
  * @Author: 陈杰超
  * @Date: 2020-06-15 20:05:50
- * @LastEditTime: 2020-09-07 15:13:45
+ * @LastEditTime: 2020-09-11 11:59:27
  * @LastEditors: 陈杰超
  * @Description: 通用组件-顶部筛选表单组件
 -->
@@ -21,7 +21,7 @@
             </a-form-item>
           </a-col>
         </template>
-        <a-col :md="8" :sm="24" style="height:56px">
+        <a-col :md="8" :sm="24" class="header-filter-footer">
           <a-button @click="triggerSearch" type="primary">搜索</a-button>
           <a-button class="reset-button" @click="triggerRest">重置</a-button>
           <slot name="button"></slot>
@@ -76,8 +76,13 @@ export default {
 <style lang="less">
 @import '~ant-design-vue/es/style/themes/default.less';
 .header-filter-component{
-  .reset-button{
-    margin-left: @pd-md;
+  .header-filter-footer{
+    float: right;
+    text-align: right;
+    height:56px;
+    .reset-button{
+      margin-left: @pd-md;
+    }
   }
 }
 </style>

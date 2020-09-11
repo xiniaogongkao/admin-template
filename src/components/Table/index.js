@@ -334,7 +334,7 @@ export default {
       const checkedList = this.alert.checkedList || []
       if (this.selectedRows.length) {
         return (
-          <span>{ checkedList && checkedList[0] ? checkedList.map(item => (<XBtn icon={item.icon} type={item.type} label={item.label} onClick={() => { this.$emit('btnAction', item.action) } }></XBtn>)) : null }</span>
+          <span>{ checkedList && checkedList[0] ? checkedList.map(item => (<XBtn icon={item.icon} type={item.type} label={item.label} on-onClick={() => { this.$emit('btnAction', item.action) } }></XBtn>)) : null }</span>
         )
       } else {
         return (null)

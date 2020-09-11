@@ -1,5 +1,11 @@
 <template>
-  <a-button class="x-btn-style" type="default" shape="round" :icon="icon" :class="`${type}-color`">{{ label }}</a-button>
+  <a-button
+    class="x-btn-style"
+    type="default"
+    shape="round"
+    :icon="icon"
+    :class="`${type}-color`"
+    @click="onClick">{{ label }}</a-button>
 </template>
 
 <script>
@@ -17,6 +23,11 @@ export default {
       type: String,
       default: 'success'
     }
+  },
+  methods: {
+    onClick() {
+      this.$emit('onClick')
+    }
   }
 }
 </script>
@@ -26,16 +37,17 @@ export default {
   margin-left: 12px;
   border: none;
   background-color: @btn-back-color;
+  &:focus{
+    color: @text-color;
+  }
   &:hover{
     color: @white;
     /deep/ .anticon{
       color: @white;
     }
   }
-  &:focus{
-    color: @white;
-  }
 }
+
 .success-color{
   &:hover{
     background-color: @success-color;
@@ -60,4 +72,5 @@ export default {
     color: @error-color;
   }
 }
+
 </style>
