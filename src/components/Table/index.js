@@ -1,7 +1,10 @@
 import T from 'ant-design-vue/es/table/Table'
 import { get, template, cloneDeep } from 'lodash'
-
+import XBtn from '@/components/global/XBtn'
 export default {
+  components: {
+    XBtn
+  },
   data() {
     return {
       needTotalList: [],
@@ -331,9 +334,7 @@ export default {
       const checkedList = this.alert.checkedList || []
       if (this.selectedRows.length) {
         return (
-          <span>{ checkedList && checkedList[0] ? checkedList.map(item => (<a-button style={{
-            'margin-left': '12px'
-          }} type={item.type} icon={item.icon} shape='round' onClick={() => { this.$emit('btnAction', item.action) } }>{item.label}</a-button>)) : null }</span>
+          <span>{ checkedList && checkedList[0] ? checkedList.map(item => (<XBtn icon={item.icon} type={item.type} label={item.label} onClick={() => { this.$emit('btnAction', item.action) } }></XBtn>)) : null }</span>
         )
       } else {
         return (null)

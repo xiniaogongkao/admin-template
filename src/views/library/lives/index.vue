@@ -111,8 +111,20 @@ const alertConfig = {
   ],
   checkedList: [
     {
+      label: '启用',
+      type: 'success',
+      icon: 'unlock',
+      action: 'deleteCourseWare'
+    },
+    {
+      label: '禁用',
+      type: 'warning',
+      icon: 'stop',
+      action: 'deleteCourseWare'
+    },
+    {
       label: '删除',
-      type: 'custom',
+      type: 'error',
       icon: 'delete',
       action: 'deleteCourseWare'
     }

@@ -1,7 +1,7 @@
 <!--
  * @Author: 陈杰超
  * @Date: 2020-06-17 18:05:29
- * @LastEditTime: 2020-09-03 13:51:57
+ * @LastEditTime: 2020-09-11 09:35:35
  * @LastEditors: 陈杰超
  * @Description: 通用组件-表单设计器
 -->
@@ -145,7 +145,7 @@ export default {
     right: 0;
     top: -10px;
     transform: translateX(calc(100% + 12px));
-    color: @textSecondary;
+    color: @assist-color;
   }
   .new-btn{
     cursor: pointer;
